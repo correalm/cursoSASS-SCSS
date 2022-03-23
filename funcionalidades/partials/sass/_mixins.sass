@@ -1,0 +1,29 @@
+@mixin special
+    color: red
+    background-color: yellow
+    padding: 10px
+    border: 1px solid red
+
+    &:hover
+        border-color: blue
+        color: transparent
+
+@mixin green
+    border-color: green
+    color: green
+
+// Mixins com argumentos. Tornar o mixin dinâmico
+@mixin espacamento($p, $m)
+    padding: $p
+    margin: $m
+
+// mixin with optional argument
+@mixin custom-border($style, $color, $width: 1px)
+    border: $width $style $color
+
+// mixin with named parameters
+@mixin colors($font: #000, $background: #FFF)
+    color: $font
+    background: $background
+    
+    
